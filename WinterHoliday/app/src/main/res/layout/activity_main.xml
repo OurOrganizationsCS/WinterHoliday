@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.spore.winterholiday.MainActivity">
+    tools:context="com.spore.winterholiday.activity.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toobar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
 
-</RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/frameLayout">
+    </FrameLayout>
+    <include
+        layout="@layout/line"/>
+    <android.support.v4.app.FragmentTabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragmentTabHost">
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>
